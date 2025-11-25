@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { MenuOption } from './interfaces/menu-option.interface';
 
 @Component({
     selector: 'gifs-side-menu-options',
-    imports: [],
+    imports: [RouterModule],
     templateUrl: './side-menu-options.html',
     styleUrl: './side-menu-options.css',
 })
@@ -18,7 +19,7 @@ export class SideMenuOptions {
         {
             label: 'Buscador',
             subLabel: 'Buscar gifs',
-            icon: 'fa-solid fa-chart-glass',
+            icon: 'fa-solid fa-magnifying-glass',
             route: '/dashboard/search',
         },
     ]);
