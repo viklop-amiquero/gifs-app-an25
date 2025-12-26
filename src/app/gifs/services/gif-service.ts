@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { computed, effect, inject, Injectable, signal } from '@angular/core';
-
 import { environment } from '@environments/environment';
 import { map, tap } from 'rxjs';
 import { Gif } from '../interfaces/gif.interface';
@@ -71,5 +70,9 @@ export class GifService {
                     }));
                 })
             );
+    }
+
+    getHistoryGifs(query: string): Gif[] {
+        return this.searchHistory()[query] ?? [];
     }
 }
