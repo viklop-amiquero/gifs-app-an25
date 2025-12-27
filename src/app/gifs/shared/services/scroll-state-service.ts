@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class ScrollStateService {
-  
+    trendingScrollState = signal(0);
 }
